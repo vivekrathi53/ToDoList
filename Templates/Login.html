@@ -3,11 +3,37 @@
 <head>
 	<title>ToDoList App</title>
 </head>
+<style type="text/css">
+	body{
+		background-image: url(logo.gif);
+		background-size: 100%;
+	}
+	.block{
+		position: absolute;
+		left: 450px;
+		top:  50px;
+		background-image: url(loginlogo.jpg);
+		background-size: 100% 100%;
+		padding: 50px;
+
+	}
+	.loginbutton{
+		height: 40px;
+		width: 250px;
+		background-color: transparent; 
+	}
+	.loginbutton:hover {
+		background-color: lightblue;
+		transition-duration: 0.3s;
+	}
+</style>
 <body>
-	<form action="/" method="POST">
-	{% csrf_token %}
-	{{ form.as_p }}
-	<input type="submit" value="Login" />
-	</form>
+	<div class="block">
+		<form action="/authenticate" method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Login" class="loginbutton" />
+		</form>
+	</div>
 </body>
 </html>
