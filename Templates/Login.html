@@ -34,6 +34,15 @@
 		{{ form.as_p }}
 		<input type="submit" value="Login" class="loginbutton" />
 		</form>
+		<button type="button" onclick="redirect()" class="loginbutton">
+			Signup
+		</button>
 	</div>
 </body>
+<script type="text/javascript">
+	function redirect()
+	{
+		window.location.href = "signup/";
+	}
+</script>
 </html>

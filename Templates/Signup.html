@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	body{
+		background-image: url(https://previews.123rf.com/images/jirsak/jirsak1707/jirsak170700007/82255755-cybersecurity-and-information-technology-security-services-concept-login-or-sign-in-internet-concept.jpg);
+		background-size: 100%;
+	}
+	.SignupBox{
+		text-align: center;
+		position: absolute;
+		font-size: 20px;
+		left: 500px;
+		top: 100px;
+	}
+	h1{
+		font-family: Comic Sans MS;
+		color: grey;
+		text-align: center;
+	}
+	.SignupButton{
+		position: absolute;
+		left: 120px;
+		top: 260px;
+		height: 40px;
+		width: 100px;
+		font-family: Comic Sans MS;
+		color: green;
+	}
+	.SignupButton:hover{
+		transition-duration: 0.4s; 
+		background-color: rgb(129,249,0);
+
+	}
+	.LoginButton{
+		position: absolute;
+		left: 610px;
+		top: 500px;
+		height: 40px;
+		width: 100px;
+		font-family: Comic Sans MS;
+		color: green;
+	}
+	.LoginButton:hover{
+		transition-duration: 0.4s; 
+		background-color: rgb(129,249,0);
+
+	}
+</style>
+<head>
+	<title>Signup</title>
+</head>
+<body>
+	<h1>Fill details below to signup</h1>
+	<form action="" method="post" >
+	<div class="SignupBox">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Submit" class="SignupButton" />
+	</div>
+	
+	</form>
+	
+</body>
+</html>
+<script type="text/javascript">
+	 $(function () {
+    $("#datetimepicker1").datetimepicker({
+      format: 'DD/MM/YYYY HH:mm',
+    });
+  });
+	function redirect()
+	{
+		window.location="/";
+	}
+</script>
