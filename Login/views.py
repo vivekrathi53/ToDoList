@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import LoginForm
 from .models import LoginUser
+from Signup.models import SignupUser
 from django.http import HttpRequest
 # Create your views here.
 def login_page(request,*args,**kwargs):
@@ -19,7 +20,7 @@ def authenticate_page(request,*args,**kwargs):
 	us = request.POST.get("username")
 	pas = request.POST.get("password")
 	try:
-		obj = LoginUser.objects.get(username=us)
+		obj = SignupUser.objects.get(username=us)
 	except:
 		return login_page(HttpRequest())
 	if pas == obj.password:

@@ -20,6 +20,6 @@ from Signup.views import signup_page
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',login_page,name='login'),
-    path('authenticate/',authenticate_page,name='auth'),
+    path('authenticate',authenticate_page,name='auth'),
     path('signup/',signup_page,name='signup')
 ]
